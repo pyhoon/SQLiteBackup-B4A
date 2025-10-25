@@ -61,10 +61,6 @@ End Sub
 Private Sub HandleLoadResult (Result As LoadResult)
 	If Result.Success Then
 		Try
-			'If File.Exists(Result.Dir, Result.FileName) = False Then
-			'	MsgboxAsync(Result.FileName & " not found", "Restore Data")
-			'	Return
-			'End If
 			SQL1.Close
 			If File.Exists(File.DirInternal, "data.db") Then
 				File.Delete(File.DirInternal, "data.db")
