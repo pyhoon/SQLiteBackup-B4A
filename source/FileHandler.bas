@@ -41,7 +41,7 @@ End Sub
 Public Sub Load As ResumableSub
 	Dim cc As ContentChooser
 	cc.Initialize("cc")
-	cc.Show("application/pdf", "Choose text file")
+	cc.Show("application/*", "Choose sqlite file")
 	Wait For CC_Result (Success As Boolean, Dir As String, FileName As String)
 	Dim res As LoadResult = CreateLoadResult(Success, Dir, FileName)
 	If res.Success Then ExtractInformationFromURI(res.FileName, res)
